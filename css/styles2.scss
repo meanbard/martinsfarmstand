@@ -1,0 +1,746 @@
+@import "_typography.scss";
+@import "_inc.scss";
+@import "_variables.scss";
+@import "_print.scss";
+
+html{
+	@include hw();
+	font-size: 16px;
+	font-family: $fauna;
+	letter-spacing: 0.01em;
+	color: $blue11;
+}
+
+body{
+	@include hw();
+}
+
+h1, h2, h3{
+	text-align: center;
+}
+
+h1{
+	font-size: 3em;
+	font-family: $playfair;
+	padding: 0.5em;
+}
+
+h2{
+	font-size: 2.25em;
+	font-family: $playfair;
+	padding: 1em;
+
+	@media screen and (min-width: 600px){
+		font-size: 2.7em;
+	}
+}
+
+h3{
+	font-size: 1.7em;
+	font-family: $playfair;
+
+	@media screen and (min-width: 600px){
+		font-size: 2em;
+	}
+}
+
+a{
+	color: inherit;
+	font-size: inherit;
+	text-decoration: none;
+}
+
+p{
+	font-family: $fauna;
+	font-size: 1.4rem;
+	text-align: left;
+	line-height: 1.6;
+}
+
+ul{
+	line-height: 1.4;
+}
+
+hr{
+	width: 60%;
+}
+
+button{
+	font-family: $playfair;
+	background: $blue00;
+	color: $brown11;
+	font-size: 1.25em;
+	padding: 0.5em;
+	margin: 0.5em;
+	border: $button-border;
+	box-shadow: $blue-shadow-inset;
+	cursor: pointer;
+
+	&:focus{
+		outline: none;
+	}
+}
+
+.head{
+	@extend h2;
+}
+
+header{
+	@include hw();
+	background: url('../imgs/snowflake-bg.png') no-repeat center center fixed, $dark-backdrop, url('../imgs/veggies-assort.JPG') no-repeat center center fixed;
+	  -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+
+	 z-index: -100;
+
+	div.quat-buttons{
+		display: none;
+
+		@media screen and (min-width: 750px){
+			display: none;
+			position: absolute;
+			bottom: 1.5em;
+			right: 0;
+			height: 15em;
+			width: 45%;
+		}
+
+		@media screen and (min-width: 900px){
+			bottom: 2.5em;
+			display: block;
+		}
+
+		button{
+			display: block;
+			background: $brown;
+			font-size: 1.25em;
+			color: $blue11;
+			box-shadow: $blue-shadow-inset;
+			border: 1px solid $blue11;
+			border-radius: 0;
+			padding: 0.5em;
+		}
+
+		.header-cta{
+			display: block;
+			margin: 0 auto 0.5em;
+
+			@media screen and (min-width: 750px){
+				width: 90%;
+			}
+
+			@media screen and (min-width: 900px){
+				width: 60%;
+			}
+
+			@media screen and (min-width: 1300px){
+				width: 45%;
+			}
+		}
+
+		.available{
+			float: left;
+			width: 35%;
+			margin-left: 7%;
+
+			@media screen and (min-width: 900px){
+				width: 40%;
+			}
+		}
+
+		.coming{
+			float: right;
+			width: 35%;
+			margin-right: 7%;
+
+			@media screen and (min-width: 900px){
+				width: 40%;
+			}
+		}
+
+		.newsletter{
+			clear: both;
+			margin: 5em auto 0;
+
+			span{
+				display: block;
+				float: left;
+				font-size: 1.5em;
+			}
+
+			@media screen and (min-width: 750px){
+				width: 90%;
+			}
+
+			@media screen and (min-width: 900px){
+				width: 60%;
+			}
+
+			@media screen and (min-width: 1300px){
+				width: 45%;
+			}
+		}
+	}
+
+	img[src*="logo"]{
+		display: block;
+		max-width: 40%;
+		margin: auto;
+		padding-top: 1.5em;
+
+		@media screen and (min-width: 600px){
+			max-width: 30%;
+		}
+
+		@media screen and (min-width: 900px){
+			max-width: 15%;
+			float: left;
+			margin-left: 5%;
+		}
+	}
+
+	h1{
+		display: none;
+		color: $brown0;
+		margin-top: 1em;
+		background: $text-underlay;
+
+		@media screen and (min-width: 600px){
+			width: 80%;
+			margin: 1em auto;
+		}
+
+		@media screen and (min-width: 900px){
+			display: block;
+			float: right;
+			width: 62%;
+			margin-top: 1.25em;
+			background: none;
+			text-align: left;
+			color: $brown00;
+			font-size: 3.5em;
+			text-shadow: 0 0 0.4em $blue11;
+		}
+	}
+
+	p{
+		color: $brown00;
+		display: block;
+		line-height: 1.65;
+		padding: 1em;
+		text-align: center;
+
+		a{
+			text-decoration: underline;
+		}
+
+		span{
+			display: block;
+			text-align: center;
+			font-size: 1.7em;
+			margin-bottom: 0.8em;
+		}
+
+		@media screen and (min-width:900px){
+			position: absolute;
+	 	 	top: 50%;
+	  		left: 50%;
+	 	 	transform: translate(-50%, -50%);
+	 	 	padding: 0;
+		}
+
+
+	}
+
+	.icon-arrow-down{
+		position: absolute;
+		display: inline-block;
+		width: 5em;
+		margin: 0 auto;
+		font-size: 3em;
+		bottom: 0.4em;
+		color: $brown00;
+
+		@media screen and (min-width: 600px){
+			width: 52.5%;
+			text-align: right;
+			bottom: 1em;
+		}
+
+		@media screen and (min-width: 900px){
+			width: 40%;
+			text-align: center;
+		}
+	}
+}
+
+#about{
+	background: url('../imgs/lightwood.jpg');
+
+	.cta{
+		display: block;
+		@include hw(6em, 60%);
+		margin: 0 auto;
+		border-radius: 0 0 10% 10%;
+
+		@media screen and (min-width: 750px){
+			display: none;
+		}
+	}
+
+	h2{
+		padding: 0.5em 0.5em 1em 0.5em;
+		font-size: 2em;
+		line-height: 1.4;
+	}
+
+	.head{
+		display: inline-block;
+		margin-left: 5%;
+		width: 90%;
+		padding: 0;
+		line-height: 1.6;
+
+		@media screen and (min-width: 600px){
+			width: 55%;
+			margin-left: 5%;
+			float: left;
+			text-align: left;
+		}
+
+		p{
+			text-align: center;
+
+			@media screen and (min-width: 600px){
+				text-align: left;
+			}
+		}
+	}
+
+	.social-cta{
+		display: block;
+		width: 30%;
+		font-size: 2.5em;
+		margin: 1em auto;
+		padding-left: 12.5%;
+
+		@media screen and (min-width: 600px){
+			float: right;
+			text-align: right;
+			margin-top: 1em;
+			padding-left: 0;
+			padding-right: 5%;
+		}
+	}
+
+	.contact{
+		width: 100%;
+		text-align: center;
+
+		@media screen and (min-width: 600px){
+			margin-top: 10em;
+		}
+
+		a{
+			display: block;
+			font-size: 1.2em;
+		}
+
+		.icon-mail{
+			font-size: 1.75em;
+		}
+
+		.icon-phone{
+			font-size: 1.75em;
+		}
+
+		.post-icon-text{
+			margin-left: 2%;
+		}
+	}
+
+	.featured{
+		text-align: center;
+		padding: 1em;
+		margin: 1.5em auto 0;
+		max-width: 90%;
+
+		@media screen and (max-width: 600px){
+			font-size: 1.1em;
+		}
+
+		@media screen and (min-width: 600px){
+			max-width: 60%;
+		}
+
+		.head{
+			float: none;
+			display: block;
+			margin: 0 auto;
+			text-align: center;
+			font-size: 1.7em;
+			width: 100%;
+
+			@media screen and (max-width: 600px){
+				font-size: 1.4em;
+			}
+		}
+	}
+}
+
+#widgets{
+	@include hw(30em, 100%);
+	padding: 2em 0 0;
+		background: url('../imgs/field_01.JPG')  no-repeat center center fixed;
+	  -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+
+	#map-canvas{
+	@include hw(12.5em, 95%);
+	margin: -0.5em auto;
+	background: $brown;
+	padding: 1em 0;
+	box-shadow: $blue-shadow;
+
+		@media screen and (min-width: 600px){
+			width: 70%;
+		}
+
+		@media screen and (min-width: 900px){
+			max-width: 55%;
+			float: left;
+			margin: 2em 2%;
+			padding: 3em 0;
+		}
+	}
+
+	#weather{
+		@include hw(12.5em, 95%);
+		background: $brown;
+		margin: 2em auto;
+		box-shadow: $blue-shadow;
+			
+			@media screen and (min-width: 600px){
+				width: 70%;
+			}
+
+			@media screen and (min-width: 900px){
+			height: 15.5em;
+			max-width: 25%;
+			float: right;
+			margin: 2em 2%;
+			padding: 0 3em 3em;
+		}
+	}
+
+	.forecast-town{
+		padding-top: 0.25em;
+		font-size: 1.8em;
+
+
+		@media screen and (min-width: 900px){
+			font-size: 2.5em;
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+
+	.forecast-current{
+		padding-bottom: 0.5em;
+	}
+
+	.forecast{
+		width: 30%;
+		text-align: right;
+		float: left;
+		margin: 0.25em;
+		margin-right: 2%;
+		margin-left: 2%;
+
+		@media screen and (min-width: 600px){
+			text-align: left;
+			width: 20%;
+			margin-left: 20%;
+		}
+
+		@media screen and (min-width: 900px){
+			width: 40%;
+			margin-left: 2%;
+		}
+
+		@media screen and (min-width: 1200px){
+			width: 40%;
+			margin-left: 10%;
+		}
+	}
+
+	.forecast-text{
+		float: right;
+		width: 40%;
+		margin: 0.25em;
+		text-align: left;
+		margin-right: 10%;
+
+		@media screen and (min-width: 600px){
+			text-align: left;
+			width: 30%;
+		}
+
+		@media screen and (min-width: 900px){
+			width: 52%;
+			margin-right: 2%;
+		}
+
+		@media screen and (min-width: 1200px){
+			width: 40%;
+			margin-left: 5%;
+		}
+	}
+}
+
+#crop-info{
+	background: url('../imgs/darkwood.jpg');
+	padding-bottom: 2em;
+	color: white;
+
+	@media screen and (min-width: 900px){
+		padding: 3em 0;
+	}
+
+	.date{
+		color: $brown00;
+	}
+
+	.dropdown{
+		display: block;
+		padding: 0.75em;
+
+
+		//Fixes bug in smaller resolution screens
+		@media screen and (max-width: 600px){
+			width: 43.5%;
+			font-size: 1.05em;
+			margin: 0;
+		}
+
+
+		@media screen and (min-width: 900px){
+			padding: 1em;
+			font-size: 1.5em;
+		}
+	}
+
+	.available{
+		float: left;
+		border: none;
+
+		@media screen and (min-width: 600px){
+			margin-left: 20%;
+		}
+	}
+
+	.coming{
+		float: right;
+
+			@media screen and (min-width: 600px){
+				margin-right: 20%;
+			}
+	}
+
+	.newsletter{
+		margin: 2em auto 0;
+		width: 90%;
+		background: $brown;
+		font-size: 1.25em;
+		color: $blue11;
+		box-shadow: inset 0 0 0.2em 0.1em $blue11;
+		border: $button-border;
+		border-radius: 0;
+
+		@media screen and (min-width: 466px){
+			font-size: 1.5em;
+		}
+
+		@media screen and (min-width: 556px){
+			width: 70%;
+			margin-top: 3em;
+		}
+
+		@media screen and (min-width: 716px){
+			width: 40%;
+		}
+
+		@media screen and (min-width: 1301px){
+			width: 25%;
+		}
+
+		span{
+			display: block;
+			float: left;
+			font-size: 1.5em;
+
+		@media screen and (min-width: 466px){
+				padding-left: 2%;
+			}
+		}
+	}
+
+	.cropdown-newsletter{
+
+		margin: 1em auto;
+		padding: 1em;
+		background: rgba(0, 0, 0, 0.3);
+
+		h3, h4{
+			font-family: $playfair;
+			clear: both;
+		}
+
+		button{
+			font-size: 1em;
+			margin-bottom: 0.75em;
+		}
+
+		p{
+			font-size: 0.8em;
+			line-height: 1.6;
+			max-width: 90%;
+			text-align: left !important;
+			margin: 1.5em auto;
+
+			@media screen and (min-width: 600px){
+				font-size: 1em;
+				max-width: 60%;
+			}
+
+			img{
+				display: block;
+				padding: 1.25em;
+				max-width: 40%;
+				margin: 0 auto;
+
+				@media screen and (min-width: 900px){
+					float: left;
+					max-width: 25%;
+				}
+			}
+		}
+
+		a{
+			line-height: 1.5;
+			color: $blue00;
+			font-size: 0.9em;
+			@include vendors(text-shadow, 0 0 0.5em $green1);
+			width: auto;
+			margin: 1em auto;		
+		}
+
+		h3, h4{
+			margin-top: 1em;
+		}
+
+		h4{
+			font-size: 1.2em;
+		}
+	}
+
+	.contact-button{
+		clear: both;
+		margin: 4em auto 0;
+	}
+
+	.cropdown{
+		text-align: center;
+		font-size: 1.4em;
+		h3{
+			line-height: 1.3;
+			margin-top: 0.5em;
+		}
+
+		p{
+			text-align: center;
+		}
+
+		ul{
+			padding-top: 1em;
+			max-width: 70%;
+			margin: 0 auto;
+
+			li{
+				margin: 0.5em;
+			}
+
+			@media screen and (min-width: 600px){
+				@include vendors(column-count, 2);
+				@include vendors(column-gap, 5%);
+			}
+
+			@media screen and (min-width: 900px){
+				@include vendors(column-count, 3);
+				@include vendors(column-gap, 5%);
+			}
+		}
+
+		a{
+			display: block;
+
+			&:first-child{
+				margin-top: 1em;
+			}
+
+			.icon-mail{
+				margin-right: 2%;
+				font-size: 1.5em;
+			}
+
+			.icon-phone{
+				margin-right: 2%;
+				font-size: 1.5em;
+			}
+		}
+	}
+}
+
+
+
+
+footer{
+	@include hw(12em, 100%);
+	position: relative;
+		background: url('../imgs/eveningflowers.jpg') no-repeat center;
+	  -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+
+	@media screen and (min-width: 600px){
+		height: 30em;
+	}
+
+	p{
+		width: 100%;
+		text-align: center;
+		color: $green00;
+		line-height: 1.5;
+		background: $text-underlay;
+		font-size: 0.9em;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		@include vendors(transform, translate(-50%, -55%));
+			
+			@media screen and (min-width: 600px){
+				width: 70%;
+				font-size: 1.4em;
+				padding: 1em;
+			}
+
+			@media screen and (min-width: 900px){
+				width: 40%;
+			}
+	}
+}

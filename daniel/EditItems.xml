@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataroot xmlns:od="urn:schemas-microsoft-com:officedata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:noNamespaceSchemaLocation="EditItems.xsd" generated="2017-04-01T08:43:32">
+<AvailableitemsQuery>
+<Description>Eggs Large</Description>
+<Price>2.5</Price>
+<QtyUnit>Dozen</QtyUnit>
+<WPrice>2</WPrice>
+<WQtyUnit>Dozen</WQtyUnit>
+</AvailableitemsQuery>
+<AvailableitemsQuery>
+<Description>potatoWhiteRedYellow Russet</Description>
+<Price>0.85</Price>
+<QtyUnit>LB</QtyUnit>
+<WPrice>0.5</WPrice>
+<WQtyUnit>LB</WQtyUnit>
+</AvailableitemsQuery>
+<AvailableitemsQuery>
+<Description>Maple Syrup</Description>
+<Price>45</Price>
+<QtyUnit>Gallon</QtyUnit>
+<WPrice>45</WPrice>
+<WQtyUnit>Gallon</WQtyUnit>
+</AvailableitemsQuery>
+<AvailableitemsQuery>
+<Description>Vinegar Raw</Description>
+<Price>14</Price>
+<QtyUnit>Each</QtyUnit>
+<WPrice>9</WPrice>
+<WQtyUnit>Each</WQtyUnit>
+</AvailableitemsQuery>
+<AvailableitemsQuery>
+<Description>parsnip</Description>
+<Price>2.75</Price>
+<QtyUnit>LB</QtyUnit>
+<WPrice>1.75</WPrice>
+<WQtyUnit>LB</WQtyUnit>
+</AvailableitemsQuery>
+<AvailableitemsQuery>
+<Description>BeetsRed</Description>
+<Price>1</Price>
+<QtyUnit>LB</QtyUnit>
+<WPrice>1</WPrice>
+<WQtyUnit>LB</WQtyUnit>
+</AvailableitemsQuery>
+<AvailableitemsQuery>
+<Description>celeriac</Description>
+<Price>3</Price>
+<QtyUnit>LB</QtyUnit>
+<WPrice>1.75</WPrice>
+<WQtyUnit>LB</WQtyUnit>
+</AvailableitemsQuery>
+<AvailableitemsQuery>
+<Description>CarrotsSmallSeconds</Description>
+<Price>0.75</Price>
+<QtyUnit>LB</QtyUnit>
+<WPrice>0.5</WPrice>
+<WQtyUnit>LB</WQtyUnit>
+</AvailableitemsQuery>
+<AvailableitemsQuery>
+<Description>OnionsYellow</Description>
+<Price>0.85</Price>
+<QtyUnit>LB</QtyUnit>
+<WPrice>0.6</WPrice>
+<WQtyUnit>LB</WQtyUnit>
+</AvailableitemsQuery>
+<AvailableitemsQuery>
+<Description>OnionsRed</Description>
+<Price>1</Price>
+<QtyUnit>LB</QtyUnit>
+<WPrice>0.9</WPrice>
+<WQtyUnit>LB</WQtyUnit>
+</AvailableitemsQuery>
+<AvailableitemsQuery>
+<Description>Beets Seconds</Description>
+<Price>10</Price>
+<QtyUnit>25lbs</QtyUnit>
+<WPrice>10</WPrice>
+<WQtyUnit>25lbs</WQtyUnit>
+</AvailableitemsQuery>
+</dataroot>

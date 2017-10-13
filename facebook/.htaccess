@@ -1,0 +1,6 @@
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^facebook\.martinsfarmstand\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.facebook\.martinsfarmstand\.com$
+RewriteRule ^/?$ "https\:\/\/" [R=301,L]
+

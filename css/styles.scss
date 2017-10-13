@@ -1,0 +1,879 @@
+@import "partials/_reset.scss";
+@import "partials/_inc.scss";
+@import "partials/_print.scss";
+@import "partials/_typography.scss";
+@import "partials/_variables.scss";
+
+html, body{
+	@include hw();
+	color: $blue00;
+	background: $blue00;
+	font-family: $secondary-font, serif;
+	line-height: 1.47368;
+	font-size: $font-size;
+}
+
+p{
+
+	&:first-letter{
+		float: left;
+		padding-right: 0.25em;
+		font-size: $typ-two;
+	}
+}
+
+.glyphicon-leaf{
+	display: inline-block;
+	color: $green11;
+	@include vendors(transform, rotateZ(45deg));
+}
+
+
+.glyphicon-180{
+	@include vendors(transform, rotateZ(225deg));
+}
+
+
+button{
+	background: url('../img/darkwood.jpg');
+	color: $brown00;
+	padding: 0.5em;
+	border: 1px solid $brown11;
+	box-shadow: 0 0 0.5em $blue11;
+	text-shadow: 0 0 0.1em $blue11;
+	font-size: $typ-one;
+
+	&:focus{
+		outline: none;
+	}
+}
+
+mark{
+	background: none;
+	color: inherit;
+}
+
+header{
+	@include hw();
+	 -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+	  font-size: 0.9em;
+	 z-index: -100;
+
+	 button{
+	 	background: url('../img/lightwood.jpg');
+	 	color: $blue11;
+	 	text-shadow: none;
+	 	font-size: $typ-base;
+	 }
+
+	 .header-row1{
+
+	 	span.glyphicon-menu-hamburger{
+	 		margin: 0.8em 0.5em;
+	 		font-size: $typ-two;
+	 		padding: $typ-secondary;
+	 		display: none;
+
+
+	 		&:before{
+	 			text-align: center;
+	 		}
+
+	 		&:hover{
+	 			cursor: pointer;
+	 		}
+
+	 		@media screen and (max-width: 992px){
+	 			display: inline-block;
+	 		}
+	 	}
+
+	 	.mobile-nav{
+	 		background: $text-underlay;
+	 		width: 100%;
+	 		display: none;
+
+	 		li{
+		 		text-align: center;
+	 		}
+
+	 		a{
+	 			color: $brown00;
+		 		font-size: $typ-one;
+
+		 		&:hover{
+		 			text-decoration: none;
+		 		}
+	 		}
+	 	}
+
+	 	.mobile-logo{
+	 		float: right;
+	 		margin: 1em;
+	 		max-width: 5em;
+
+	 		@media screen and (min-width: 994px){
+	 			display: none;
+	 		}
+	 	}
+
+
+	 	div#nav{
+	 		color: $blue11;
+	 		@include hw(4em, 100%);
+	 		background: url('../img/lightwood.jpg');
+	 		border-bottom: 1px solid $blue11;
+	 		position: fixed;
+	 		@include vendors(box-shadow, 0px 6px 25px -6px $blue11);
+	 		z-index: 10000;
+
+	 		@media screen and (max-width: 994px){
+	 			display: none;
+	 		}
+
+			a{
+				color: $blue11;
+
+				&.selected{
+					border-bottom: 1px solid $blue11;
+				}
+
+				&:hover{
+					text-decoration: none;
+					color: $blue;
+				}
+
+				&:active{
+					text-decoration: none;
+					color: $blue;
+				}
+
+				&:focus{
+					text-decoration: none;
+					color: $blue11;
+				}
+			}
+
+	 		span{
+	 			font-family: "PT Sans", sans-serif;
+	 			font-size: $typ-one;
+	 			color: $blue11;
+	 			margin-top: 0.5em;
+	 			margin-left: 2%;
+
+	 			&::before{
+	 				font-family: default;
+	 			}
+	 		}
+
+	 		.nav-left-box{
+	 			float: left;
+	 			width: 23em;
+
+	 			img[src*="logo"]{
+	 				max-width: 3.9em;
+	 				margin-left: 2%;
+	 				float: left;
+	 			}
+
+	 			h2{
+	 				margin-top: 0.3em;
+	 				text-align: left;
+	 				margin-left: 3.3em;
+	 			}
+	 		}
+
+	 		.nav-right-box{
+	 			float: right;
+	 			width: 25em;
+	 			font-size: $typ-one;
+
+	 			ul{
+	 				text-align: right;
+
+	 				li{
+	 					display: inline-block;
+	 					margin: 0.7em 2.5% 0;
+
+	 					a{
+	 						&:hover{
+	 							cursor: pointer;
+	 						}
+	 					}
+	 				}
+	 			}
+
+	 			@media screen and (max-width: 994px){
+	 				display: none;
+	 			}
+	 		}
+	 	}
+	 }
+
+	 		.contact{
+	 			display: none;
+	 			width: 30%;
+	 			background: url('../img/lightwood.jpg');
+	 			margin: 3em auto 0;
+	 			color: $blue11;
+	 			font-size: $typ-one;
+	 			padding: 1em;
+
+	 			a{
+	 				color: $blue11;
+
+	 				&:hover{
+	 					text-decoration: none;
+	 				}
+	 			}
+
+	 			mark{
+	 				font-family: 'PT Sans', sans-serif;
+	 			}
+
+	 			@media screen and (max-width: 1275px){
+	 				font-size: $typ-base;
+	 				margin-top: 3.5em;
+	 			}
+	 		}
+
+
+			#newsModal{
+				color: $blue11;
+				background: rgba(203, 208, 221, 0.05);
+				margin-top: $typ-three;
+
+				@media screen and (max-width: 992px){
+				}
+
+				.modal-dialog{
+					box-shadow: 0 0 $typ-secondary #fcfcfc;
+					border: none;
+				}
+
+
+				.modal-body{
+					height: 25em;
+					background: url('../img/lightwood.jpg');
+
+					h1, h2, h3{
+						margin-bottom: 1em;
+					}
+				
+					form{
+						margin: 0 auto;
+						text-align: center;
+					}
+						input{
+							display: block;
+							margin: 0.2em auto;
+						}
+					}
+
+					.modal-header{
+						font-size: $typ-one;
+					}
+
+					.modal-header, .modal-footer{
+						background: url('../img/darkwood.jpg');
+						color: $brown00;
+					}
+				}
+	
+	.header-row2{
+		width: 100%;
+		text-align: center;
+		margin-top: $typ-three * 4;
+		color: $brown00;
+		text-shadow: 1px 0px 20px $blue11;
+		letter-spacing: 0.05em;
+
+		h2.slogan{
+			@media screen and (max-width: 430px){
+				display: none;
+			}
+		}
+
+			@media screen and (max-width: 993px){
+				margin-top: $typ-secondary;
+			}
+
+		.strawberry-button{
+			display: block;
+			margin: 1em auto;
+			box-shadow: 0 0 1.5em #92140C;
+		}
+
+		#strawberryModal{
+			margin-top: 4em;
+			color: $blue11;
+
+			.modal-dialog{
+			}
+
+			.modal-content{
+				height: 25em;
+
+				.close-modal{
+					clear: both;
+					@include vendors(transition-duration, 0.3s);
+
+					&:hover{
+						@include vendors(box-shadow, 0 0 0.5em $blue0);
+					}
+				}
+
+				img{
+					display: block;
+					margin: 1em;
+					border: 1px solid $blue11;
+					max-width: 40%;
+					float: left;
+					clear: both;
+				}
+
+				h2{
+					margin-bottom: 0.5em;
+				}
+
+				ul{
+					margin-bottom: 0.5em;
+					li{
+						margin-bottom: 0.5em;
+					}
+				}
+
+				.strawberry-hours{
+					float: right;
+					margin: 1em;
+					margin-right: 5em;
+				}
+
+				.strawberry-tips{
+					clear: both;
+				}
+
+				background: $brown00;
+				font-size: $typ-one;
+				text-shadow: none;
+				padding: 2em;
+			}
+		}
+
+		button{
+			width: 20em;
+			margin-top: $typ-secondary;
+			box-shadow: 0 0 1.5em $green00;
+			.glyphicon-leaf{
+				padding: 0 $typ-base;
+			}
+
+			@media screen and (max-width: 600px){
+				width: 95%;
+			}
+		}
+	}
+
+	.header-row3{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+
+		.hours{
+		width: 30%;
+		background: $text-underlay;
+		padding: 0.5em 1.6em;
+		margin: 1em 5%;
+		float: left;
+		text-align: center;
+		border: 1px solid $blue11;
+
+			.winter-hrs{
+				display: none;
+			}
+
+			@media screen and (max-width: 992px){
+				display: none;
+			}
+
+			.glyphicon-hourglass{
+				font-size: $typ-two;
+			}
+
+			span{
+				display: block;
+			}
+
+			button{
+				font-size: $typ-base;
+				width: 8em;
+				padding: 0.2em;
+				margin: 0.5em 0 0;
+			}
+
+			h2, h3{
+				margin-bottom: 0.1em;
+			}
+
+			p{
+				&:first-letter{
+					font-size: $typ-base;
+					padding: 0;
+					float: none;
+				}
+			}
+
+		}
+
+		.mobile-contact-info{
+			background: $text-underlay;
+			width: 60%;
+			padding: 1em;
+			margin: 1em 0 0 1em;
+			float: left;
+			color: $brown00;
+
+			span{
+	 			width: 100%;
+	 			font-size: $typ-one;
+
+	 			@media screen and (max-width: 1200px){
+	 				font-size: $typ-base;
+	 			}
+
+	 			mark{
+	 				letter-spacing: 0.015em;
+	 				font-family: 'Radley', serif;
+	 			}
+
+	 			a{
+	 				color: $brown00;
+
+	 				&[href*="tel"]{
+	 					font-family: 'PT Sans', sans-serif;
+	 				}
+
+	 				&:hover{
+	 					color: $brown0;
+	 					text-decoration: none;
+	 				}
+
+	 				&:active{
+	 					color: inherit;
+	 				}
+	 			}
+	 		}
+
+	 		@media screen and (max-width: 679px){
+	 			font-size: $typ-secondary;
+	 		}
+
+			@media screen and (max-width: 450px){
+				float: none;
+				display: block;
+				width: 100%;
+				margin: 0;
+				text-align: center;
+			}
+
+			@media screen and (min-width: 992px){
+				display: none;
+			}
+		}
+
+		.mobile-subscribe-btn{
+			float: right;
+			margin: $typ-secondary;
+			display: block;
+			width: 30%;
+
+			@media screen and (min-width: 992px){
+				display: none;
+			}
+
+			@media screen and (max-width: 450px){
+				float: none;
+				display: block;
+				width: 70%;
+				margin: 0 auto;
+			}
+		}
+
+
+
+		nav{
+			position: absolute;
+			bottom: 3em;
+			right: 8%;
+			display: block;
+			@include hw(12.5em, 12.5em);
+			@include vendors(transform, rotateZ(45deg));
+			background: $text-underlay;
+			border: 1px solid $blue11;
+
+			h4, button, input{
+				display: block;
+				@include vendors(transform, rotateZ(-45deg));
+			}
+
+			h4{
+				position: absolute;
+				top: 10%;
+				left: -37.5%;
+				line-height: 1.7;
+				width: 15em !important;
+				text-align: center;
+				font-size: 1.2em;
+				width: 100%;	
+				white-space: nowrap;
+				letter-spacing: 0.002em;
+			}
+
+			input{
+				position: absolute;
+				bottom: 30%;
+				right: 0;
+				width: 75%;
+				color: $blue11;
+				background: $brown00;
+				font-family: 'PT Sans', sans-serif;
+				font-size: $typ-base;
+				letter-spacing: 0.002em;
+				padding: 0.2em;
+
+				&::-webkit-input-placeholder{
+					color: $blue;
+				}
+
+				&:-moz-input-placeholder{
+					color: $blue;
+				}
+
+				&::-moz-input-placeholder{
+					color: $blue;
+				}
+
+				&::-o-input-placeholer{
+					color: $blue;
+				}
+
+				&::-ms-input-placeholder{
+					color: $blue;
+				}
+
+				&:focus{
+					outline: none;
+				}
+			}
+
+			button{
+				position: absolute;
+				padding: 0.5em;
+				bottom: 1em;
+				right: 10%;
+
+			}
+
+
+		 	@media screen and (max-width: 992px){
+		 		display: none;
+		 	}
+
+				> span{	
+				}
+			}
+		}
+	}
+	
+
+section{
+	padding-bottom: 1em;
+}
+
+
+section#about{
+	background: url('../img/lightwood.jpg');
+	width: 100%;
+	color: $blue11;
+	border-top: 1px solid $blue11;
+	border-bottom: 1px solid $blue11;
+
+	&>div{
+		padding: 1em;
+		margin-bottom: 1em;
+	}
+
+	.bio{
+		@include hw(100%, 45%);
+		float: left;
+		margin-bottom: 0;
+		margin-left: 5%;
+
+		@media screen and (max-width: 992px){
+			float: none;
+			width: 95%;
+			margin: 0 auto;
+
+			h2{
+				font-size: $typ-one;
+			}
+
+			p{
+				font-size: $typ-secondary;
+			}
+		}
+
+		span.glyphicon{
+			width: 10%;
+			display: block;
+			margin: 0 auto;
+			font-size: $typ-three;
+		}
+
+		a{
+			font-size: 1.1em;
+			cursor: pointer;
+		}
+
+		.fb-page{
+			width: 400px;
+			margin: 1em auto;
+			display: block;
+			border: 1px solid $blue11;
+
+			@media screen and (max-width: 600px){
+				margin: 1em 1%;
+			}
+
+		}
+
+	}
+
+
+	.directions{
+		@include hw(45%, 45%);
+		float: right;
+		margin-bottom: 4em;
+		border-left: 1px solid $blue11;
+
+		@media screen and (max-width: 992px){
+			float: none;
+			width: 95%;
+			margin: 0 auto;
+			border-left: none;
+			border-top: 1px solid $blue11;
+		}
+
+		> span{
+			display: block;
+			text-align: center;
+			font-size: $typ-three;
+		}
+
+		address{
+			text-align: center;
+			font-size: $typ-one;
+		}
+
+		#map-canvas{
+			@include hw(12em, 70%);
+			margin: 0 auto;
+			border: 1px solid $blue11;
+
+			@media screen and (max-width: 992px){
+				width: 95%;
+			}
+		}
+
+		button{
+			display: block;
+			margin: 0 auto;
+		}
+	}
+
+	.weather{
+		width: 45%;
+		float: right;
+		text-align: center;
+		margin: 1em 0 0;
+		border-bottom: 1px solid $blue11;
+		border-left: 1px solid $blue11;
+
+		@media screen and (max-width: 992px){
+			float: none;
+			width: 95%;
+			margin: 0 auto;
+			border-left: none;
+			border-bottom: none;
+			border-top: 1px solid $blue11;
+
+			h3{
+
+			font-size: $typ-base;
+			}
+		}
+
+		img[src*="wunderground"]{
+			max-width: 20%;
+			display: block;
+			margin: 0 auto;
+		}
+	}
+}
+
+section#available{
+	width: 100%;
+	color: $blue11;
+	padding-bottom: 2em;
+	background: url('../img/field_01.JPG') no-repeat center center fixed;
+	@include vendors(background-size, cover);
+	color: #fff;
+	@include vendors(box-shadow, inset 0px 15px 20px -10px $brown00);
+
+	.available-content{
+		background: $text-underlay;
+		width: 70%;
+		margin: 0 auto;
+		padding: $typ-one;
+
+		@media screen and (max-width: 992px){
+			width: 95%;
+		}
+		
+		h2{
+			margin-top: 1em;
+		}
+	}
+
+	.available-nav{
+		width: 100%;
+		text-align: center;
+		margin-bottom: 1em;
+
+
+		button{
+			display: inline-block;
+			width: 15%;
+			padding-bottom: $typ-secondary;
+			margin: 0 0.5em;
+			font-size: $typ-base;
+
+			@media screen and (max-width: 992px){
+				width: 35%;
+			}
+		}
+	}
+	
+	ul{
+		width: 100%;
+		text-align: center;
+		line-height: 1.4;
+		@include vendors(column-count, 2);
+		margin: 0 auto;
+
+			@media screen and (max-width: 992px){
+				@include vendors(column-count, 1);
+				font-size: $typ-secondary;
+			}
+	}
+
+}
+
+section#newsletter{
+	width: 100%;
+	padding: 1em;
+	color: $blue11;
+	background: url('../img/lightwood.jpg');
+	border-top: 1px solid $blue11;
+	border-bottom: 1px solid $blue11;
+
+
+	.recent{
+		float: left;
+		width: 45%;
+		margin-left: 5%;
+
+		figure{
+			margin: 1em 0;
+
+			img{
+				display: block;
+				margin: 0 auto;
+				max-width: 50%;
+				border: 1px solid $blue11;
+
+				 ~figcaption{
+					text-align: center;
+					font-size: $typ-secondary;
+					margin-top: $typ-secondary;
+				}
+
+				~p{
+					margin-top: $typ-secondary;
+				}
+			}
+		}
+
+		@media screen and (max-width: 992px){
+			float: none;
+			width: 95%;
+			margin: 0;
+		}
+	}
+
+	.archive{
+		float: right;
+		width: 40%;
+		margin-right: 5%;
+		margin: 1em;
+		font-size: $typ-one;
+
+		@media screen and (max-width: 992px){
+			float: none;
+			margin: 0 auto;
+		}
+
+		img{
+			max-width: 25%;
+			display: block;
+			margin: 0 auto;
+			border: 1px solid $blue11;
+		}
+	}
+}
+
+footer{
+	@include hw(30em, 100%);
+	background: url('../img/eveningflowers.jpg') no-repeat center center;
+	@include vendors(background-size, cover);
+
+	.glyphicon-leaf{
+		color: $green;
+	}
+
+	ul{
+		width: 50%;
+		text-align: center;
+		font-size: $typ-one;
+		margin: 0 auto;
+		padding: $typ-secondary;
+		background: $text-underlay;
+
+		h2{
+			display: inline;
+			font-size: inherit;
+		}
+
+		@media screen and (max-width: 992px){
+			width: 95%;
+		}
+
+		@media screen and (max-width: 600px){
+			font-size: $typ-secondary;
+		}
+	}
+}
